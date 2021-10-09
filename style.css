@@ -21,10 +21,6 @@ nav{
     flex-wrap: wrap;
     padding: 5px 0;
 }
-/*nav h1{
-    font-size: 45px;
-    cursor: default;/*need a icon of my name*/
-}*/
 nav ul{
     flex: 1;
     text-align: right;
