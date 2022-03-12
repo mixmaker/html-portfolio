@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
- 
-   <div class="container">
-    <nav>
-      <!-- <h1>Shoumik</h1> -->
-      <ul>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact me</a></li>
-        <li><a href="">Portfolio</a></li>
-      </ul>
-      <!-- <img src="resources/cart.png" class="cart-icon"> -->
-    </nav>
-   </div>
-   
-  <div class="text-box">
-    <p>I'M</p>
-    <h1>SHOUMIK</h1>
-    <h3>An engineering student and aspirant</h3>
-   </div>
-   <div class="social-icons">
-     <a href="https://www.facebook.com/shoumik.kumbhakar/" target="_blank"><img src="resources/facebook.png" alt=""></a>
-     <a href="https://www.instagram.com/shoumik_kumbhakar/" target="_blank"><img src="/resources/instagram.png" alt=""></a>
-     <a href="https://telegram.me/shoumikkumbhakar" target="_blank"><img src="/resources/telegram.png" alt=""></a>
-   </div>
-</body> 
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <!-- <h1>Shoumik</h1> -->
+        <ul>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Contact me</a></li>
+          <li><a href="https://www.shoumik.tk" target="_blank">Portfolio</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="text-box">
+      <p>I'M</p>
+      <h1>SHOUMIK</h1>
+      <h3>An engineering student and a freelancer</h3>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/shoumik.kumbhakar/" target="_blank"
+        ><img src="./resources/facebook.png" alt=""
+      /></a>
+      <a href="https://www.instagram.com/shoumik_kumbhakar/" target="_blank"
+        ><img src="./resources/instagram.png" alt=""
+      /></a>
+      <a href="https://telegram.me/shoumikkumbhakar" target="_blank"
+        ><img src="./resources/telegram.png" alt=""
+      /></a>
+    </div>
+<div class="menu">
+  <span>Home</span><span>About</span><span>Portfolio</span><span>Contact</span>
+</div>
+<div class="menuTog">
+  <span></span><span></span><span></span>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script>
+      gsap.from("ul li", { opacity: 0, y: -50, duration: 2, stagger: .25});
+
+      let menuToggle = document.querySelector(".menuTog");
+      let menuText = document.querySelector(".menu");
+      menuToggle.onclick = function () {
+        menuToggle.classList.toggle("menuActive")
+        menuText.classList.toggle("menuActive")
+      }
+    </script>
+  </body>
 </html>
